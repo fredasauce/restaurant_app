@@ -19,7 +19,11 @@ class Api::ItemsController < ApplicationController
   end
 
   def update
-    @item.update(complete: !@item.complete)
+    # item = @menu.items.find(params[:id])
+    # item.update
+    # render json: item
+
+    @item.update(item_params)
     render json: @item
   end
 
